@@ -33,7 +33,7 @@ module.exports = {
 			password: 'faucet',
 			daemon: {
 				host: '127.0.0.1',
-				port: 8447
+				port: 14486
 			}
 		},
 
