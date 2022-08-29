@@ -29,7 +29,7 @@ module.exports = {
 
 		// The wallet to open
 		walletToOpen: {
-			filename: 'faucet.wallet',
+			filename: 'faucet1.wallet',
 			password: 'faucet',
 			daemon: {
 				host: '34.86.103.64',
