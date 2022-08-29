@@ -15,7 +15,7 @@
     along with XeniumFaucet.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-const { WalletAPI } = require('turtlecoin-rpc')
+const { WalletAPI } = require('@trrxitte/traaittcash-rpc')
 const PackageJSON = require('./package.json')
 const { terminal } = require('terminal-kit')
 const request = require('request-promise')
@@ -40,7 +40,7 @@ const transactionsDatabase = NeDB.create({
 
 const wallet = new WalletAPI({
 	...config.wallet,
-	userAgent: `XeniumFaucet ${PackageJSON.version}`
+	userAgent: `traaittCASHFaucet ${PackageJSON.version}`
 })
 
 let walletAddress = ''

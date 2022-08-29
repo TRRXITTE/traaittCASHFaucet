@@ -1,11 +1,11 @@
 {
-	"name": "xeniumfaucet",
+	"name": "traaittcashfaucet",
 	"version": "1.0.0",
-	"description": "Faucet for Xenium",
+	"description": "Faucet for traaittCASH",
 	"main": "index.js",
 	"author": "TheDevMinerTV",
 	"repository": {
-		"url": "https://github.com/TheDevMinerTV/XeniumFaucet"
+		"url": "https://github.com/TRRXITTE/traaittCASHFaucet"
 	},
 	"license": "GPL-3.0",
 	"private": false,
@@ -15,7 +15,7 @@
 		"nedb-promises": "6.1.0",
 		"pug": "3.0.2",
 		"terminal-kit": "2.4.0",
-		"turtlecoin-rpc": "2.0.5",
+		"@trrxitte/traaittcash-rpc": "0.0.3",
 		"request-promise": "4.2.6"
 	}
 }

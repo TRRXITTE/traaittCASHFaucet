@@ -25,7 +25,7 @@ module.exports = {
 	// WalletAPI configuration
 	wallet: {
 		// Set openWallet to true if it should open the wallet configured
-		openWallet: false,
+		openWallet: true,
 
 		// The wallet to open
 		walletToOpen: {
@@ -33,65 +33,65 @@ module.exports = {
 			password: 'faucet',
 			daemon: {
 				host: '127.0.0.1',
-				port: 32779
+				port: 8447
 			}
 		},
 
 		// The server the wallet API is running on
 		host: '127.0.0.1',
-		port: 32780,
+		port: 8447,
 
 		// Password for the wallet API
 		password: 'faucet',
 
 		// Coin configuration
-		defaultUnlockTime: 35,
-		defaultMixin: 2,
-		decimalPlaces: 3,
-		decimalDivisor: 10 ** 3, // 10 to the power of decimalPlaces
-		defaultFee: 0.5
+		defaultUnlockTime: 8,
+		defaultMixin: 3,
+		decimalPlaces: 8,
+		decimalDivisor: 10 ** 8, // 10 to the power of decimalPlaces
+		defaultFee: 0.00000010
 	},
 
 	// Google reCaptcha v2 configuration
 	recaptcha: {
 		// Set to true if reCaptcha should be enabled
-		enabled: false,
+		enabled: true,
 
 		// Credentials from reCaptcha's Admin Console
-		siteKey: 'YOUR SITEKEY',
-		secretKey: 'YOUR SECRETKEY'
+		siteKey: '6LeLF7ohAAAAAP5bgGT5rnxf2Vc9s5sgcHA2mK9V',
+		secretKey: '6LeLF7ohAAAAAGwWkZQMACJKS1lwbC3p77hCSrEo'
 	},
 
 	// Backend configuration
 	faucet: {
 		// The port where the faucet should run on
-		port: 8909,
+		port: 8080,
 
 		// The minimum amount of coins to be sent (in atomic units)
 		minimumCoinsToBeSent: 1000,
 
 		// The maximum amount of coins to be sent (in atomic units)
-		maximumCoinsToBeSent: 25000,
+		maximumCoinsToBeSent: 100000,
 
 		// Address validation
 		walletAddressLength: 98,
-		walletAddressStartsWith: 'XNU',
+		walletAddressStartsWith: 'cash',
 
 		// Coins are claimable every this many milliseconds
-		claimableEvery: 24 * 60 * 60 * 1000 // 24 hours
+		claimableEvery: 1 * 60 * 60 * 1000 // 24 hours
 	},
 
 	// Frontend configuration
 	frontend: {
 		// Coin configuration for the frontend
-		coinName: 'Xenium',
-		ticker: 'XNU',
+		coinName: 'traaittCASH',
+		ticker: 'XTCASH',
 
 		// Coin claiming interval as a string
-		claimableEvery: '24 hours',
+		claimableEvery: '1 hours',
 
 		// The person this faucet is run by, with Discord Tag
-		faucetOwner: 'TheDevMinerTV',
-		faucetOwnerDiscord: 'TheDevMinerTV#4751'
+		faucetOwner: 'TRRXITTE Int., incorporate',
+		faucetOwnerDiscord: 'тяяхiтте#0880'
 	}
 }
