@@ -1,0 +1,51 @@
+//- This file is part of XeniumFaucet.
+//-
+//- XeniumFaucet is free software: you can redistribute it and/or modify
+//- it under the terms of the GNU General Public License as published by
+//- the Free Software Foundation, either version 3 of the License, or
+//- (at your option) any later version.
+//-
+//- XeniumFaucet is distributed in the hope that it will be useful,
+//- but WITHOUT ANY WARRANTY; without even the implied warranty of
+//- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//- GNU General Public License for more details.
+//-
+//- You should have received a copy of the GNU General Public License
+//- along with XeniumFaucet.  If not, see <https://www.gnu.org/licenses/>.
+
+extends ./template.pug
+
+block scripts
+	script(src='https://www.google.com/recaptcha/api.js', async, defer)
+
+block tabs
+	li.is-active
+		a.is-active(href="/") Faucet
+	li
+		a(href="/cooldowns") Cooldowns
+	li
+		a(href="/about") About
+
+block body
+	p You will recieve between #{locals.minCoins} #{locals.ticker} and #{locals.maxCoins} #{locals.ticker}!
+
+	br
+
+	div.notification.is-info
+		p Please note that you can only claim coins every #{locals.claimableEvery}.
+
+	form#claimForm(action="/claimCoins" method="post")
+		input.input(type="text" name="address", placeholder=coinWalletDescription)
+
+		br
+		br
+
+		if locals.recaptchaEnabled
+			button.button.is-primary.is-rounded.g-recaptcha(data-sitekey=locals.recaptchaSiteKey, data-callback="onSubmit") Claim your coins!
+		else
+			input.button.is-primary.is-rounded(type="submit" name="submit" value="Claim your coins!")
+
+	script.
+		function onSubmit() {
+			document.getElementById('claimForm').submit()
+		}
